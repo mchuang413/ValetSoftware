@@ -86,8 +86,8 @@ class App extends React.Component {
                 name="ticketNumber"
                 value={this.state.ticketNumber}
                 onChange={this.handleChange}
-                minLength="6"
-                maxLength="10"
+                minLength="3"
+                maxLength="100"
                 required
               />
               <span className="form-highlight"></span>
