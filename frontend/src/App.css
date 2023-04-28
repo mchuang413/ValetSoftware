@@ -1,0 +1,119 @@
+.App {
+    background-color: #111;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    background-color: #222;
+    width: 500px;
+    border-radius: 10px;
+    padding: 40px;
+  }
+  
+  .form-header {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  label {
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    color: #aaa;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  input {
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #333;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .form-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: #333;
+  }
+  
+  .form-bar:before,
+  .form-bar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-bar:before {
+    left: -20px;
+    width: 20px;
+    background: #fff;
+  }
+  
+  .form-bar:after {
+    right: -20px;
+    width: 20px;
+    background: #fff;
+  }
+  
+  .form-group input:focus ~ .form-highlight {
+    animation: input-highlighter 0.3s ease;
+  }
+  
+  .form-group input:valid ~ .form-highlight {
+    animation: input-highlighter 0.3s ease;
+  }
+  
+  .form-group input:focus ~ .form-bar:before,
+  .form-group input:focus ~ .form-bar:after {
+    width: 50%;
+  }
+  
+  @keyframes input-highlighter {
+    from {
+      background: #5264AE;
+    }
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+  
+  button[type="submit"] {
+    background-color: #fff;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #111;
+    color: #fff;
+  }
+  
